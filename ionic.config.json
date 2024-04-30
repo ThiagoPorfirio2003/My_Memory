@@ -1,0 +1,7 @@
+{
+  "name": "MyMemory",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
