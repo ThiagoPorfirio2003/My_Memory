@@ -1,0 +1,18 @@
+<ion-content>
+  <section class="splashScreen" [ngClass]="this.splashScreenClass">
+    @if (this.showTxt) 
+    {
+      <h1 class="myName tracking-in-contract-bck-top">Thiago Porfirio</h1>
+    }
+
+    <img src="../../../../../assets/SplashScreen/My_Memory.png">
+  
+    @if(this.showTxt) 
+    {
+      <h1 class="myDivision tracking-in-contract-bck-bottom">4to A</h1>
+    }
+  </section>
+</ion-content>
+
+<!--[ngClass]="this.myNameH1class" 
+[ngClass]="this.myDivisionH1class"-->

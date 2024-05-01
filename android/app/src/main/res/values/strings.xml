@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Mi memoria</string>
+    <string name="title_activity_main">Mi memoria</string>
+    <string name="package_name">io.ionic.MyMemory</string>
+    <string name="custom_url_scheme">io.ionic.MyMemory</string>
+</resources>

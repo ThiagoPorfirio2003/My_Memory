@@ -1,17 +1,25 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { canGoSplashGuard } from './features/splashScreen/guards/can-go-splash.guard';
+import { SplashScreenComponent } from './features/splashScreen/components/splash-screen/splash-screen.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'auth',
+    loadChildren: () => import('./features/auth/pages/auth.module').then( m => m.AuthPageModule)
+  },
+  {
+    path: 'splashScreen',
+    component: SplashScreenComponent,
+    canActivate: [canGoSplashGuard]
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'splashScreen',
     pathMatch: 'full'
   },
 ];
+
 
 @NgModule({
   imports: [
