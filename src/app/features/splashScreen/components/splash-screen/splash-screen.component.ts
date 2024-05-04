@@ -10,14 +10,20 @@ import { UtilsService } from 'src/app/core/services/utils.service';
 })
 export class SplashScreenComponent
 {
-  public showTxt : boolean;
-  public splashScreenClass : string;
+  public h1Text : string;
+  public h2Text : string;
+
+  public h1AnimationClass : string;
+  public h2AnimationClass : string;
 
   constructor(private utilsService : UtilsService,
     private platform : Platform)
     {
-      this.showTxt = false;
-      this.splashScreenClass = 'slide-out-right'
+      this.h1Text = 'Thiago Porfirio';
+      this.h2Text = '4to A';
+
+      this.h1AnimationClass = 'tracking-out-expand-fwd-top';
+      this.h2AnimationClass = 'tracking-out-expand-fwd-bottom'
     }
 
     ionViewDidEnter()
@@ -30,9 +36,12 @@ export class SplashScreenComponent
 
           setTimeout(()=>
           {
-            this.showTxt = true;
-            this.splashScreenClass = 'slide-in-right'
-          },500)
+            this.h1Text = '4to A';
+            this.h2Text = 'Thiago Porfirio';
+      
+            this.h1AnimationClass = 'tracking-in-contract-bck-top';
+            this.h2AnimationClass = 'tracking-in-contract-bck-bottom'          
+          },2000)
 
           SplashScreen.hide().then(()=>
           {

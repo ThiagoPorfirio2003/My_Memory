@@ -1,16 +1,14 @@
 <ion-content>
-  <section class="splashScreen" [ngClass]="this.splashScreenClass">
-    @if (this.showTxt) 
-    {
-      <h1 class="myName tracking-in-contract-bck-top">Thiago Porfirio</h1>
-    }
+  <section class="splashScreen">
+    
+    <h1 [ngClass]="this.h1AnimationClass">{{this.h1Text}}</h1>
 
-    <img src="../../../../../assets/SplashScreen/My_Memory.png">
+    <section class="iconContainer rotate-center">
+      <img src="../../../../../assets/SplashScreen/MyMemory_NoBack.png">
+    </section>
   
-    @if(this.showTxt) 
-    {
-      <h1 class="myDivision tracking-in-contract-bck-bottom">4to A</h1>
-    }
+    <h2 [ngClass]="this.h2AnimationClass">{{this.h2Text}}</h2>
+    
   </section>
 </ion-content>
 
