@@ -1,0 +1,90 @@
+ion-content {
+    --padding-end: 5%;
+    --padding-start: 5%;
+   // --padding-top: 4%; 
+   // position: absolute;
+}
+
+ion-grid{
+    --ion-grid-padding: 0px;	
+}
+
+ion-button{
+    --box-shadow: 0px;
+    font-size: 24px;
+}
+
+ion-button.vertical
+{
+    writing-mode: vertical-lr;
+}
+
+ion-col .ionBetweenTag
+{
+    --border-radius: 0;
+    --border-width: 0;
+}
+
+ion-col{
+    --ion-grid-column-padding: 0px
+}
+
+
+.buttonLeft
+{
+    width: 100%;
+    margin: 0;
+    --border-radius: 0px 54px 0px;
+    --border-width: 0px 0px 3px 3px;
+
+    //--border-radius: 0px 62px 0px;
+    //--border-width: 0px 0px 3px 3px;
+    --border-style: solid;
+    --background: var(--ion-color-secondary);
+    --color: var(--ion-color-primary);
+    --border-color: var(--ion-color-primary);
+}
+
+.buttonRight
+{
+    width: 100%;
+    margin: 0;
+    --border-radius: 38px 0px 64px;
+    //--border-radius: 62px 0px 62px;
+    --border-width: 0px 3px 3px 0px;
+    --border-style: solid;
+    --background: var(--ion-color-secondary);
+    --color: var(--ion-color-primary);
+    --border-color: var(--ion-color-primary);
+}
+
+.logo
+{
+    margin-top: 12%;
+}
+
+.iconContainer
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.logForm
+{
+    width: 100%;
+    margin-top: 12%;
+}
+
+.fastAccessUsersList
+{
+    margin-top: 12%;
+}
+
+h1
+{
+    margin: 0%;
+    text-align: center;
+    color: var(--ion-color-secondary);
+    font-size: 55px;
+    writing-mode: vertical-lr;
+}

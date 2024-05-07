@@ -1,13 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>auth</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [title]="'Bienvenido'"></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">auth</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid class="logo">
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <h1 class="ion-float-left">Mi memoria</h1>
+        <section class="iconContainer">
+          <img class="imgIcon" src="../../../../assets/SplashScreen/MyMemory_NoBack.png">
+        </section>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="logForm">
+    <app-access-data-form [fastUser]="this.fastAccessUserSelected"
+    (submitDataEventEmitter)="this.receiveAccessData($event)"></app-access-data-form>
+  </div>
+
+  <ion-grid class="fastAccessUsersList">
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-button class="buttonLeft vertical" (click)="this.changeFastAccessUserSelected(1)">Invitado </ion-button>
+      </ion-col>
+
+      <ion-col class="ion-align-self-end">
+        <ion-button class="ionBetweenTag secondaryInput" (click)="this.changeFastAccessUserSelected(2)">Usuario</ion-button>
+        <ion-button class="ionBetweenTag secondaryInput" (click)="this.changeFastAccessUserSelected(0)">Admin</ion-button>
+        <ion-button class="ionBetweenTag secondaryInput" (click)="this.changeFastAccessUserSelected(4)">Tester</ion-button>
+      </ion-col>
+
+      <ion-col class="ion-align-self-end">
+        <ion-button class="buttonRight vertical" (click)="this.changeFastAccessUserSelected(3)">Anonimo</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

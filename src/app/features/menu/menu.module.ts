@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AuthPageRoutingModule } from './auth-routing.module';
+import { MenuPageRoutingModule } from './menu-routing.module';
 
-import { AuthPage } from './auth.page';
-import { AuthModule } from '../auth.module';
+import { MenuPage } from './menu.page';
 import { SharedComponentsModule } from 'src/app/core/sharedComponents/shared-components.module';
 
 @NgModule({
@@ -15,10 +14,9 @@ import { SharedComponentsModule } from 'src/app/core/sharedComponents/shared-com
     CommonModule,
     FormsModule,
     IonicModule,
-    AuthPageRoutingModule, 
-    AuthModule,
+    MenuPageRoutingModule,
     SharedComponentsModule
   ],
-  declarations: [AuthPage]
+  declarations: [MenuPage]
 })
-export class AuthPageModule {}
+export class MenuPageModule {}
