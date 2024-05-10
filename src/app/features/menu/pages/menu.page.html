@@ -43,7 +43,7 @@
 
           @for (player of this.bestPlayers; track $index) 
           {
-            <ion-row>
+            <ion-row class="data">
               <ion-col><h3>{{player.playerName}}</h3></ion-col>
               <ion-col><h3>{{this.transaleDifficulties(player.difficulty)}}</h3></ion-col>
               <ion-col><h3>{{player.seconds}}</h3></ion-col>
