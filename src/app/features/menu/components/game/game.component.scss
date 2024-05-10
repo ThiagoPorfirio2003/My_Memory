@@ -1,0 +1,70 @@
+div.screen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+}
+
+img{
+    max-width: 40%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+ion-button.card{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    --border-radius: 0px;
+    --border-width: 5%;
+    border: solid #000;
+    --background: #3bf4fb;
+    --background-activated: #3bf4fb;
+}
+
+ion-button.card.wait{
+    --background: #fcf300;
+}
+
+ion-button.card.wait[disabled]
+{
+    opacity: 1;
+}
+
+ion-button.card.correct{
+    --background: #1bc44b;
+}
+
+ion-button.card.correct[disabled]
+{
+    opacity: 1;
+}
+
+ion-button.card.incorrect{
+    --background: #d90429;
+}
+
+ion-button.card.incorrect[disabled]
+{
+    opacity: 1;
+}
+
+div.cardFrame
+{
+    padding: 0px;
+    margin: 0px;
+    //max-width: 50%;
+    //max-height: 50%;
+    flex-shrink: 1;
+    flex-basis: 50%;
+    flex-grow: 1;
+   // flex-basis: 0;
+   // flex-grow: 1;
+   // flex-shrink: 1;
+    //max-width: 50%;
+   // max-height: 50%;
+}

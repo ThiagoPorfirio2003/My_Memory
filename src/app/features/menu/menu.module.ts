@@ -1,22 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
+import { GameComponent } from './components/game/game.component';
 import { IonicModule } from '@ionic/angular';
 
-import { MenuPageRoutingModule } from './menu-routing.module';
 
-import { MenuPage } from './menu.page';
-import { SharedComponentsModule } from 'src/app/core/sharedComponents/shared-components.module';
 
 @NgModule({
+  declarations: [GameComponent],
   imports: [
     CommonModule,
-    FormsModule,
-    IonicModule,
-    MenuPageRoutingModule,
-    SharedComponentsModule
+    IonicModule
   ],
-  declarations: [MenuPage]
+  exports:
+  [
+    GameComponent
+  ]
 })
-export class MenuPageModule {}
+export class MenuModule { }

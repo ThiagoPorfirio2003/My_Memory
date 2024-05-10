@@ -4,7 +4,7 @@
       <ion-row class="ion-align-items-center">
         @if (this.authService.isLogued) 
         {
-          <ion-col><ion-title>{{this.profile}}</ion-title></ion-col>
+          <ion-col><ion-title>{{this.authService.myUser.userName}}</ion-title></ion-col>
           <ion-col>
             <ion-button (click)="this.signOut()" expand="block" fill="solid" shape="round" class="logOutBtn">
               Salir
