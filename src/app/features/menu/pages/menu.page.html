@@ -61,8 +61,18 @@
             {
               <ion-row class="data">
                 <ion-col><h3>{{result.playerName}}</h3></ion-col>
-                <ion-col><h3>{{this.transaleDifficulties(result.gameDifficulty)}}</h3></ion-col>
-                <ion-col><h3>{{result.gameDurationMs / 1000}}</h3></ion-col>
+
+                <ion-col>
+                  <div class="simpleData">
+                    <h3>{{this.transaleDifficulties(result.gameDifficulty)}}</h3>
+                  </div>
+                </ion-col>
+
+                <ion-col>
+                  <div class="simpleData">
+                    <h3>{{result.gameDurationMs / 1000}}</h3>
+                  </div>
+                </ion-col>
               </ion-row>
             }
           </ion-grid>

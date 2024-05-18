@@ -37,12 +37,12 @@ export class MenuPage //implements OnInit
   /*
   ngOnInit(): void 
   {
-    this.bestPlayers = [
-      {seconds: 50, playerName: 'adm_Natalia', uidPlayer: 'jkfad', id: 'fds', difficulty: enumDifficulties.EASY},
-      {seconds: 100, playerName: 'inv_Martina', uidPlayer: 'jkfad', id: 'fds', difficulty: enumDifficulties.NORMAL},
-      {seconds: 150, playerName: 'test_Cecilia', uidPlayer: 'jkfad', id: 'fds', difficulty: enumDifficulties.HARD},
-      {seconds: 250, playerName: 'Nadie', uidPlayer: 'jkfad', id: 'fds', difficulty: enumDifficulties.HARD},
-      {seconds: 300, playerName: 'user_Esteban', uidPlayer: 'jkfad', id: 'fds', difficulty: enumDifficulties.NORMAL},
+    this.topResults = [
+      {gameDurationMs: 50, playerName: 'adm_Natalia', playerUID: 'jkfad', UID: 'fds', gameDifficulty: enumDifficulties.EASY},
+      {gameDurationMs: 100, playerName: 'inv_Martina', playerUID: 'jkfad', UID: 'fds', gameDifficulty: enumDifficulties.NORMAL},
+      {gameDurationMs: 150, playerName: 'test_Cecilia', playerUID: 'jkfad', UID: 'fds', gameDifficulty: enumDifficulties.HARD},
+      {gameDurationMs: 250, playerName: 'Nadie', playerUID: 'jkfad', UID: 'fds', gameDifficulty: enumDifficulties.HARD},
+      {gameDurationMs: 300, playerName: 'user_Esteban', playerUID: 'jkfad', UID: 'fds', gameDifficulty: enumDifficulties.NORMAL},
     ] 
   }
   */

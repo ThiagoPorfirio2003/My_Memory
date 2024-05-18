@@ -30,7 +30,7 @@ div.otherScreen{
     h1{
         text-align: center;
         margin:0%;
-        color: var(--ion-color-secondary);
+        color: #023e8a;
     }
 
     ion-button {
@@ -68,13 +68,11 @@ div.otherScreen{
     }
 
     width: 97%;
-    height: 50%;
-    margin-top: 5%;
+    height: 46%;
+    margin-top: 6%;
     box-sizing: border-box;
-    //border: 15px solid var(--ion-color-secondary);
     border: 0px;
     border-radius: 0px;
-    //border-radius: 0px 25px 0px 25px;
     text-align: center;
 
     ion-col{
@@ -94,7 +92,21 @@ div.otherScreen{
     }
 
     ion-row.data{
-        color: var(--ion-color-secondary);
+        color: #023e8a;
+
+        h3{
+            margin: 0px;
+        }
+
+        ion-col{
+            div.simpleData
+            {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+            }
+        }
     }
 }
 
