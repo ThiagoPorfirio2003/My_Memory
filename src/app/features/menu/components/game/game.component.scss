@@ -22,12 +22,10 @@ ion-button.card{
     --border-radius: 0px;
     --border-width: 5%;
     border: solid #000;
-    --background: #3bf4fb;
-    --background-activated: #3bf4fb;
 }
 
 ion-button.card.wait{
-    --background: #fcf300;
+    border: solid #fcf300;
 }
 
 ion-button.card.wait[disabled]
@@ -36,7 +34,7 @@ ion-button.card.wait[disabled]
 }
 
 ion-button.card.correct{
-    --background: #1bc44b;
+    border: solid #008000;
 }
 
 ion-button.card.correct[disabled]
@@ -45,7 +43,7 @@ ion-button.card.correct[disabled]
 }
 
 ion-button.card.incorrect{
-    --background: #d90429;
+    border: solid #9d0208;
 }
 
 ion-button.card.incorrect[disabled]

@@ -6,6 +6,7 @@ import { AuthService } from '../services/auth.service';
 import { DatabaseService } from '../../data/database.service';
 import { MyForm } from 'src/app/core/models/form.model';
 import { MyStatus } from 'src/app/core/models/status.model';
+import { NameCollections } from 'src/app/core/enums/collectionNames';
 
 
 @Component({
@@ -52,7 +53,7 @@ export class AuthPage{
       {
         const userCredential = await this.authService.logIn(userAccessData.data);
 
-        const doc = await this.databaseService.getDocRef('users', userCredential.user.uid);
+        const doc = await this.databaseService.getDocRef(NameCollections.USER, userCredential.user.uid);
 
         if(doc.exists())
         {

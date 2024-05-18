@@ -1,6 +1,14 @@
 <app-header></app-header>
 
 <ion-content>
+  @if (!this.showGame && !this.showMenu) 
+  {
+    <ion-fab (click)="this.changeShowMenu(true)" vertical="top" horizontal="start" slot="fixed">
+      <ion-fab-button><ion-icon name="arrow-undo"></ion-icon></ion-fab-button>
+    </ion-fab>
+  }
+
+
   <div class="screen">
     @if (this.showMenu) 
     {
@@ -31,11 +39,10 @@
       @if (this.showGame) 
       {
         <div class="otherScreen">
-          <app-game (showMenuEventEmitter)="this.changeShowMenu($event)" [diffilcutyChosen]="this.difficultyChosen" [showGame]="this.showGame"></app-game>
+          <app-game (saveGameResult)="this.saveGameResult($event)" [diffilcutyChosen]="this.difficultyChosen" [showGame]="this.showGame"></app-game>
         </div>
       }
       @else {
- 
         <ion-button class="playBtn" [color]="this.difficultyNameColor" (click)="true" shape="round"
         (click)="this.play()">
           Jugar
@@ -50,12 +57,12 @@
               <ion-col><h2>Segundos</h2></ion-col>
             </ion-row>
   
-            @for (player of this.bestPlayers; track $index) 
+            @for (result of this.topResults; track $index) 
             {
               <ion-row class="data">
-                <ion-col><h3>{{player.playerName}}</h3></ion-col>
-                <ion-col><h3>{{this.transaleDifficulties(player.difficulty)}}</h3></ion-col>
-                <ion-col><h3>{{player.seconds}}</h3></ion-col>
+                <ion-col><h3>{{result.playerName}}</h3></ion-col>
+                <ion-col><h3>{{this.transaleDifficulties(result.gameDifficulty)}}</h3></ion-col>
+                <ion-col><h3>{{result.gameDurationMs / 1000}}</h3></ion-col>
               </ion-row>
             }
           </ion-grid>

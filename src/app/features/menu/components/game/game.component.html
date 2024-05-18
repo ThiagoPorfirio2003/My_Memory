@@ -2,7 +2,8 @@
   @for (card of this.game.cards; track $index) 
   {
     <div class="cardFrame" disabled>
-      <ion-button class="card sf" [id]="'btn' + $index" [disabled]="!this.canClic || card.showImg || this.showAllImgs"
+
+      <ion-button class="card" [id]="'btn' + $index" [disabled]="!this.canClic || card.showImg || this.showAllImgs" [color]="this.color"
       (click)="this.selectCard(card, 'btn' + $index)">
         
         <img [src]="card.showImg || this.showAllImgs ? card.imgPath : '../../../../../assets/images/questionSign.png'">
