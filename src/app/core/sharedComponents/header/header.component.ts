@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/features/auth/services/auth.service';
 import { UtilsService } from '../../services/utils.service';
-import { logOut } from 'ionicons/icons';
+import { power } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 
 @Component({
@@ -15,7 +15,7 @@ export class HeaderComponent
   
   constructor(public authService : AuthService, private utilsService : UtilsService) 
   {
-    addIcons({logOut})
+    addIcons({power})
   }
 
   public signOut()

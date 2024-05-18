@@ -12,11 +12,15 @@ export class MenuPage implements OnInit{
   public difficultyChosen : enumDifficulties
   public showMenu : boolean;
   public bestPlayers! : Array<gameResult>;
+  public showGame : boolean;
+
+  public difficultyNameColor! : string;
 
   constructor() 
   {
+    this.showGame = false;
     this.difficultyChosen = 1;
-    this.showMenu = false;
+    this.showMenu = true;
   }
 
   ngOnInit(): void 
@@ -32,13 +36,35 @@ export class MenuPage implements OnInit{
 
   public choseDifficulty(choose : enumDifficulties)
   {
+    switch(choose)
+    {
+      case enumDifficulties.EASY:
+        this.difficultyNameColor = 'success';
+        break;
+
+      case enumDifficulties.NORMAL:
+        this.difficultyNameColor = 'warning';
+        break;
+
+      case enumDifficulties.HARD:
+        this.difficultyNameColor = 'danger';
+        break;
+    }
+
     this.difficultyChosen = choose;
-    this.showMenu = true;
+    this.showMenu = false;
+    this.showGame = false;
+  }
+
+  public play()
+  {
+    this.showGame = true;
   }
 
   public changeShowMenu(show : boolean)
   {
     this.showMenu = show;
+    this.showGame = false;
   }
 
   public transaleDifficulties(value : enumDifficulties)

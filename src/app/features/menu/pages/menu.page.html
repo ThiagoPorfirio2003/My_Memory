@@ -4,53 +4,70 @@
   <div class="screen">
     @if (this.showMenu) 
     {
-      <div class="otherScreen">
-        <app-game (showMenuEventEmitter)="this.changeShowMenu($event)" [diffilcutyChosen]="this.difficultyChosen" [componentIsVisible]="this.showMenu"></app-game>
-      </div>
-    }
-    @else {
       <div class="menu">
         <h1>Selecciona la dificultad</h1>
   
-        <ion-button (click)="this.choseDifficulty(1)" class="shapeExtremetBtn">
+        <ion-button (click)="this.choseDifficulty(1)" color="success" class="shapeExtremetBtn">
           <h2>
             Fácil 
           </h2>
         </ion-button>
       
-        <ion-button (click)="this.choseDifficulty(2)" class="shapeBetweentBtn">
+        <ion-button (click)="this.choseDifficulty(2)" color="warning" class="shapeBetweentBtn">
           <h2>
             Normal 
           </h2>
         </ion-button>
   
-        <ion-button (click)="this.choseDifficulty(3)" class="shapeExtremetBtn">
+        <ion-button (click)="this.choseDifficulty(3)" color="danger" class="shapeExtremetBtn">
           <h2>
             Difícil
           </h2>
         </ion-button>
       </div>
+    }
+    @else {
 
+      @if (this.showGame) 
+      {
+        <div class="otherScreen">
+          <app-game (showMenuEventEmitter)="this.changeShowMenu($event)" [diffilcutyChosen]="this.difficultyChosen" [showGame]="this.showGame"></app-game>
+        </div>
+      }
+      @else {
+ 
+        <ion-button class="playBtn" [color]="this.difficultyNameColor" (click)="true" shape="round"
+        (click)="this.play()">
+          Jugar
+        </ion-button>
 
-      <div class="ranking">
-        <H1 class="tittle">MEJORES JUGADORES</H1>
-        <ion-grid>
-          <ion-row class="tittle">
-            <ion-col><h2>Nombre</h2></ion-col>
-            <ion-col><h2>Modo</h2></ion-col>
-            <ion-col><h2>Segundos</h2></ion-col>
-          </ion-row>
-
-          @for (player of this.bestPlayers; track $index) 
-          {
-            <ion-row class="data">
-              <ion-col><h3>{{player.playerName}}</h3></ion-col>
-              <ion-col><h3>{{this.transaleDifficulties(player.difficulty)}}</h3></ion-col>
-              <ion-col><h3>{{player.seconds}}</h3></ion-col>
+        <div class="ranking">
+          <H1 [style]="'background-color: var(--ion-color-' + this.difficultyNameColor + ')'" class="tittle">MEJORES JUGADORES</H1>
+          <ion-grid>
+            <ion-row class="tittle">
+              <ion-col><h2>Nombre</h2></ion-col>
+              <ion-col><h2>Modo</h2></ion-col>
+              <ion-col><h2>Segundos</h2></ion-col>
             </ion-row>
-          }
-        </ion-grid>
-      </div>
+  
+            @for (player of this.bestPlayers; track $index) 
+            {
+              <ion-row class="data">
+                <ion-col><h3>{{player.playerName}}</h3></ion-col>
+                <ion-col><h3>{{this.transaleDifficulties(player.difficulty)}}</h3></ion-col>
+                <ion-col><h3>{{player.seconds}}</h3></ion-col>
+              </ion-row>
+            }
+          </ion-grid>
+        </div>
+      }
+    }
+
+    @if (!this.showGame) 
+    {
+      <section class="iconContainer">
+        <img src="../../../../../assets/SplashScreen/MyMemory_NoBack.png">
+      </section>
     }
   </div>
 </ion-content>

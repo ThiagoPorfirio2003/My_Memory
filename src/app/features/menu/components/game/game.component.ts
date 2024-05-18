@@ -14,7 +14,7 @@ import { UtilsService } from 'src/app/core/services/utils.service';
 export class GameComponent implements OnChanges
 {
   @Input() diffilcutyChosen! : enumDifficulties;
-  @Input() componentIsVisible! : boolean;
+  @Input() showGame! : boolean;
   @Output() showMenuEventEmitter : EventEmitter<boolean>;
 
   public showAllImgs : boolean;
@@ -35,7 +35,7 @@ export class GameComponent implements OnChanges
 
   ngOnChanges(changes : SimpleChanges) : void 
   {
-    if(changes['componentIsVisible'].currentValue == true)
+    if(changes['showGame'].currentValue == true)
     {
       this.game = MyGame.getGame(this.diffilcutyChosen);
 
