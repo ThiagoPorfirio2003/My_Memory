@@ -37,7 +37,7 @@ export class AuthPage{
 
   public changeFastAccessUserSelected(userIndex : number)
   {
-    this.fastAccessUserSelected = this.fastAccessUsers[userIndex];
+    this.fastAccessUserSelected = {email: this.fastAccessUsers[userIndex].email, password: this.fastAccessUsers[userIndex].password}
   }
 
   public async receiveAccessData(userAccessData : MyForm<MyUserAccessData>)
@@ -59,6 +59,7 @@ export class AuthPage{
         {
           loginStatus.success = true;
           this.authService.logMyUser(doc.data() as MyUser);
+          this.fastAccessUserSelected = {email: '', password: ''};
           this.utilsServices.changeRoute('/menu');
         }
       }

@@ -14,8 +14,8 @@ export class DatabaseService {
 
   public readonly USERS_COLLECTION_NAME : NameCollections = NameCollections.USER;
 
-  constructor() 
-  { 
+  constructor()
+  {
     this.firestore = inject(Firestore);
   }
 

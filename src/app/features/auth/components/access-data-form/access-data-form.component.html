@@ -8,7 +8,6 @@
   <ion-note>{{this.passwordErrorText}}</ion-note>
 }
 
-
 <form class="loginForm" [formGroup]="this.loginForm">
   <ion-button (click)="this.submitData()" class="logBtn ionTopTag  primaryInput" fill="full" shape="round" >
     Iniciar sesión
@@ -18,7 +17,7 @@
   <ion-item lines="none" class="ionBetweenTag secondaryInput">
     <ion-icon color="secondary" class="iconColor" slot="start" name="mail"></ion-icon>
 
-  <ion-input formControlName="email" name="email" type="email" inputmode="email" placeholder="Email" clearInput="true"
+  <ion-input formControlName="email" name="email" type="email" inputmode="email" placeholder="Correo" clearInput="true"
     (ionInput)="this.changeEmailErrorText()"></ion-input>
   </ion-item>   
 

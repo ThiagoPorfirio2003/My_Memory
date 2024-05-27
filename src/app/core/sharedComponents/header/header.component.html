@@ -11,10 +11,21 @@
             </ion-button>
           </ion-col>
 
-          <ion-col><ion-title>{{this.authService.myUser.userName}}</ion-title></ion-col>
+          <ion-col>
+            <ion-title>{{this.authService.myUser.userName}}</ion-title>
+          </ion-col>
         }
         @else {
-          <ion-col><ion-title class="tittle ion-text-center">{{this.title}}</ion-title></ion-col>
+          <ion-col size="1">
+            <div class="iconFrame">
+              <ion-icon color="secondary" name="game-controller-outline"></ion-icon>         
+            </div>
+          </ion-col>
+
+          <ion-col size="8">
+            <ion-title class="tittle ion-text-start">{{this.title}}</ion-title>
+          </ion-col>
+
         }
       </ion-row>
     </ion-grid>
