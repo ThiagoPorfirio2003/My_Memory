@@ -1,9 +1,9 @@
-@if(this.loginForm.controls['email'].errors && this.loginForm.controls['email'].touched) 
+@if(this.emailErrorText !== '') 
 {
   <ion-note>{{this.emailErrorText}}</ion-note>
 }
 
-@if(this.loginForm.controls['password'].errors && this.loginForm.controls['password'].touched) 
+@if(this.passwordErrorText !== '') 
 {
   <ion-note>{{this.passwordErrorText}}</ion-note>
 }
